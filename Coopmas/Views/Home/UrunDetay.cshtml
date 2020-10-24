@@ -1,0 +1,29 @@
+﻿@model Coopmas.Models.Urunler;
+
+@{
+    ViewData["Title"] = "UrunDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+
+<b>Ürün id</b>
+@Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Ürün Adı</b>
+@Html.TextBoxFor(x => x.AD, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Ürün Özellikleri</b>
+@Html.TextBoxFor(x => x.Ozellik, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Dökümantasyon</b>
+@Html.TextBoxFor(x => x.Dokumantasyon, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Fiyat</b>
+@Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Satış iletişim</b>
+@Html.TextBoxFor(x => x.Satisİletisim, new { @class = "form-control", @readonly = "readonly" })
+<br />
+

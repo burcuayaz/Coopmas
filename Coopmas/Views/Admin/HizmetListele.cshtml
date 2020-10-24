@@ -1,0 +1,36 @@
+﻿@using Coopmas.Models
+@model List<Coopmas.Models.Hizmetler>
+@{
+    ViewData["Title"] = "HizmetListele";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>İd</th>
+        <th>Ad</th>
+        <th>Özellikler</th>
+        <th>Fiyat</th>
+        <th>Dökümantasyon</th>
+        <th>Satış İletişim</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var h in Model)
+    {
+        <tr>
+                 <td>@h.id</td>
+                <td>@h.HizmetAdi</td>
+                 <td>@h.Ozellik</td>
+                <td>@h.Fiyat</td>
+                <td>@h.Dokumantasyon</td>
+                <td>@h.Satisİletisim</td>
+            <td><a asp-controller="Admin" asp-action="HizmetSil"  asp-route-id="@h.id" class="btn btn-danger">Sil</a></td>
+            <td><a asp-controller="Admin" asp-action="HizmetGetir"  asp-route-id="@h.id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a asp-controller="Admin" asp-action="HizmetEkle" class=" btn btn-primary">Yeni Hizmet Ekle</a>

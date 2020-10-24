@@ -1,0 +1,26 @@
+﻿@using Coopmas.Models
+@model List<Coopmas.Models.Hizmetler>
+@{
+    ViewData["Title"] = "HizmetDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Hizmet Adı</th>
+        <th>Genel özellikleri</th>
+        <th>Fiyatlandırma</th>
+        <th>Dökümantasyon</th>
+        <th>Satış İletişim</th>
+    </tr>
+ @*  @foreach (var u in Model)
+    {
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    } *@
+</table>

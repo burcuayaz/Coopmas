@@ -1,0 +1,28 @@
+﻿@using Coopmas.Models
+@model List<Coopmas.Models.Urunler>
+
+@{
+    ViewData["Title"] = "Urunİslem";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>DETAYLAR</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+  @* @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.ID</td>
+            <td>@u.AD</td>
+            <td><a href="/Home/UrunDetay" class="btn btn-primary">Detay</a></td>
+        </tr>
+    } *@
+</table>

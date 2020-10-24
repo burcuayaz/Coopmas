@@ -1,0 +1,33 @@
+﻿@using Coopmas.Models
+@model List<Coopmas.Models.İletisim>
+@{
+    ViewData["Title"] = "MesajGoruntule";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Ad Soyad</th>
+        <th>E-Posta</th>
+        <th>Konu</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+
+    </tr>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.adsoyad</td>
+            <td>@u.eposta</td>
+            <td>@u.konu</td>
+            <td>@u.mesaj</td>
+          
+            <td><a href="/Admin/MesajSil/@u.id" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+    }
+</table>

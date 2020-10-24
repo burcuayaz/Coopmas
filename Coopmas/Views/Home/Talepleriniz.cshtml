@@ -1,0 +1,57 @@
+﻿@model Coopmas.Models.talep
+
+@{
+    ViewData["Title"] = "Talepleriniz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+
+<form asp-controller="Home" asp-action="Talepleriniz" method="post">
+    <!-- Input and Submit elements -->
+    <div class="form-group">
+        <label for="exampleInputEmail1">Kısaca projenizden bahsebilirmisiniz?</label>
+        <textarea  asp-for="soru1" class="form-control" rows="5" id="soru1"></textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Projeniz için öngördüğünüz zamanlama nedir?</label>
+        <input type="date"  asp-for="soru2" class="form-control" value="string.Format("{0:yyyy-MM-dd}")" id="soru2" aria-describedby="emailHelp">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Projeniz için yapılmış ön çalışmalar var mı?</label>
+        <textarea  asp-for="soru3"  class="form-control"  rows="5" id="soru3" ></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Projeniz için oluşturduğunuz bir bütçe var mı?</label>
+        <input type="number"  asp-for="soru4"  class="form-control" id="soru4" aria-describedby="emailHelp">
+    </div>
+
+    <h6>Size Nasıl Ulaşabiliriz?</h6>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">E-Posta</label>
+        <input type="email"  asp-for="email" class="form-control" id="email" aria-describedby="emailHelp">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Telefon</label>
+        <input type="number"  asp-for="telephone"  class="form-control" id="telephone" aria-describedby="emailHelp">
+    </div>
+
+    <h6>Size Nasıl Hitap Edebiliriz?</h6>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Adınız & Soyadınız</label>
+        <input type="text"  asp-for="name"  class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>

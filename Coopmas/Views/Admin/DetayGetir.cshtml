@@ -1,0 +1,30 @@
+﻿@model Coopmas.Models.Urunler
+
+@{
+    ViewData["Title"] = "DetayGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+@using (Html.BeginForm("DetayGetir", "Admin", FormMethod.Post))
+{
+    <b>Ürün id</b>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    <b>Ürün Adı</b>
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+    <br />
+    <b>Ürün Adı</b>
+    @Html.TextBoxFor(x => x.Ozellik, new { @class = "form-control" })
+    <br />
+    <b>Ürün Adı</b>
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    <b>Ürün Adı</b>
+    @Html.TextBoxFor(x => x.Dokumantasyon, new { @class = "form-control" })
+    <br />
+    <b>Ürün Adı</b>
+    @Html.TextBoxFor(x => x.Satisİletisim, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-default" style="background-color:#ff6a00; color:white;">Ürün Güncelle</button>
+}

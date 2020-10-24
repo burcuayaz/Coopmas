@@ -1,0 +1,35 @@
+﻿@model Coopmas.Models.Hizmetler
+
+@{
+    ViewData["Title"] = "HizmetEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+<br />
+<form class="form-group" method="post">
+
+    <b> Hizmet Adı</b>
+    <br />
+    @Html.TextBoxFor(x => x.HizmetAdi, new { @class = "form-control" })
+    <br />
+    <b>Özellikler</b>
+    <br />
+    @Html.TextBoxFor(x => x.Ozellik, new { @class = "form-control" })
+    <br />
+    <b>Fiyat</b>
+    <br />
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    <b>Dökümantasyon</b>
+    <br />
+    @Html.TextBoxFor(x => x.Dokumantasyon, new { @class = "form-control" })
+    <br />
+    <b>Satış İletişim</b>
+    <br />
+    @Html.TextBoxFor(x => x.Satisİletisim, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Hizmet Ekle</button>
+
+</form>

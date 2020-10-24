@@ -1,0 +1,37 @@
+﻿@using Coopmas.Models
+@model List<Coopmas.Models.Urunler>
+@{
+    ViewData["Title"] = "UrunListele";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>İd</th>
+        <th>Ad</th>
+        <th>Özellikler</th>
+        <th>Fiyat</th>
+        <th>Dökümantasyon</th>
+        <th>Satış İletişim</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.ID</td>
+                <td>@u.AD</td>
+                 <td>@u.Ozellik</td>
+                <td>@u.Fiyat</td>
+                <td>@u.Dokumantasyon</td>
+                <td>@u.Satisİletisim</td>
+                <td><a asp-controller="Admin" asp-action="UrunSil" asp-route-id="@u.ID" class="btn btn-danger">Sil</a></td>
+                <td><a  asp-controller="Admin" asp-action="UrunGetir" asp-route-id="@u.ID"  class="btn btn-success">Güncelle</a></td>
+
+            </tr>
+        } 
+</table>
+ <a asp-controller="Admin" asp-action="UrunEkle" class=" btn btn-primary">Yeni Ürün Ekle</a>

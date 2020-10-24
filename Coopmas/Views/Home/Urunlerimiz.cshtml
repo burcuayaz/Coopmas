@@ -1,0 +1,24 @@
+﻿@using Coopmas.Models
+@model List<Coopmas.Models.Urunler>
+@{
+    ViewData["Title"] = "Urunlerimiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+      
+        <th>AD</th>
+        <th>DETAYLAR</th>
+
+    </tr>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.AD</td>
+            <td><a asp-controller="Home" asp-action="UrunDetay" asp-route-id="@u.ID" class="btn btn-primary">Detay</a></td>
+        </tr>
+    }
+</table>

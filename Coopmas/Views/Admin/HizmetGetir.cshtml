@@ -1,0 +1,32 @@
+﻿@model Coopmas.Models.Hizmetler
+
+@{
+    ViewData["Title"] = "HizmetGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+@using (Html.BeginForm("HizmetGuncelle", "Admin", FormMethod.Post))
+{
+    <b>Hizmet id</b>
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control" })
+    <br />
+    <b>Hizmet Adı</b>
+    @Html.TextBoxFor(x => x.HizmetAdi, new { @class = "form-control" })
+    <br />
+    <b>Özellikler</b>
+    @Html.TextBoxFor(x => x.Ozellik, new { @class = "form-control" })
+    <br />
+    <b>Fiyat</b>
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    <b>Dökümantasyon</b>
+    @Html.TextBoxFor(x => x.Dokumantasyon, new { @class = "form-control" })
+    <br />
+    <b>Satış İletişim</b>
+    @Html.TextBoxFor(x => x.Satisİletisim, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-default" style="background-color:#ff6a00; color:white;">Hizmet Güncelle</button>
+}
