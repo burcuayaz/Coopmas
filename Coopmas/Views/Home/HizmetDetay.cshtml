@@ -1,26 +1,28 @@
-﻿@using Coopmas.Models
-@model List<Coopmas.Models.Hizmetler>
+﻿@model Coopmas.Models.Hizmetler;
+
 @{
     ViewData["Title"] = "HizmetDetay";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+<b>Hizmet id</b>
+@Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
 <br />
+<b>Hizmet Adı</b>
+@Html.TextBoxFor(x => x.HizmetAdi, new { @class = "form-control", @readonly = "readonly" })
 <br />
-<table class="table table-bordered">
-    <tr>
-        <th>Hizmet Adı</th>
-        <th>Genel özellikleri</th>
-        <th>Fiyatlandırma</th>
-        <th>Dökümantasyon</th>
-        <th>Satış İletişim</th>
-    </tr>
- @*  @foreach (var u in Model)
-    {
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    } *@
-</table>
+<b>Özellikleri</b>
+@Html.TextBoxFor(x => x.Ozellik, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Dökümantasyon</b>
+@Html.TextBoxFor(x => x.Dokumantasyon, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Fiyat</b>
+@Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control", @readonly = "readonly" })
+<br />
+<b>Satış iletişim</b>
+@Html.TextBoxFor(x => x.Satisİletisim, new { @class = "form-control", @readonly = "readonly" })
+<br />
+

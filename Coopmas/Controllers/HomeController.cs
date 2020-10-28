@@ -67,10 +67,6 @@ namespace Coopmas.Controllers
         }
 
 
-
-
-
-
         //Hizmetler kısmının listelenmesi
 
         Context c = new Context();
@@ -83,9 +79,11 @@ namespace Coopmas.Controllers
 
         
         //Hizmetlerin detaylarının görüntülendiği sayfa..
-        public IActionResult HizmetDetay()
+        public IActionResult HizmetDetay(int id)
         {
-            return View();
+            var hzm = c.hizmetlers.Find(id);
+
+            return View("HizmetDetay", hzm);
         }
 
 
